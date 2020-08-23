@@ -16,13 +16,13 @@
     function scssCompile() {
         return gulp.src('./scss/main.scss', {allowempty : true})
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./'))
     };
 
     function autoprefix() {
-        return gulp.src('./css/main.css')
+        return gulp.src('./main.css')
         .pipe(autoprefixer())
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./'))
     }
     
 
